@@ -18,4 +18,30 @@ body {
   background-size: cover;
   background-position: center;
   height: 100vh;
+}
+
+.background--start {
+  background-image: url(../assets/images/battle-background3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+@media screen and (min-width: 1280px) {
+  .background--start {
+    background-image: url(../assets/images/battle-background1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+}
+@media screen and (min-width: 768px) {
+  .background--start {
+    background-image: url(../assets/images/pokemon-background2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
 }/*# sourceMappingURL=global.css.map */
