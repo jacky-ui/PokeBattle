@@ -16,3 +16,13 @@ body {
     background-position: center;
     height: 100vh;
 }
+
+.background--start {
+    @include desktop {
+        background-image: url(../assets/images/battle-background1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+}
