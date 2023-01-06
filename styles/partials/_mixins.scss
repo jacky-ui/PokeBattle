@@ -1,0 +1,15 @@
+// Included typography in here
+// Solid font
+@font-face {
+    font-family: "Pokemon";
+    src: url("../../assets/fonts/Pokemon\ Solid.woff") format("woff");
+    font-weight: normal;
+    font-size: normal;
+}
+
+@mixin page-header-desktop {
+    font-size: 2rem;
+    font-weight: normal;
+    line-height: 2.25rem;
+    font-family: "Pokemon";
+}

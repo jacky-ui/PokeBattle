@@ -1,8 +1,20 @@
+@font-face {
+  font-family: "Pokemon";
+  src: url("../../assets/fonts/Pokemon Solid.woff") format("woff");
+  font-weight: normal;
+  font-size: normal;
+}
 *, ::after, ::before {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  background-color: black;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 2.25rem;
+  font-family: "Pokemon";
 }/*# sourceMappingURL=global.css.map */
