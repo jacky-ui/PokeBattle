@@ -1,3 +1,6 @@
+@use "./partials/mixins" as *;
+@use "./partials/variables" as *;
+
 *, ::after, ::before {
     box-sizing: border-box;
 }
