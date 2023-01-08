@@ -31,14 +31,14 @@ button:hover {
         height: 100vh;
     }
     @include tablet {
-        background-image: url(../assets/images/pokemon-background2.png);
+        background-image: url(../assets/images/battle-background2.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         height: 100vh;
     }
 
-    background-image: url(../assets/images/battle-background3.png);
+    background-image: url(../assets/images/battle-background3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

@@ -1,11 +1,11 @@
 // Variables for breakpoints
 $tablet-breakpoint: 768px;
-$desktop-breakpoint:1280px;
+$desktop-breakpoint: 1280px;
 
 // Mixins for each breakpoint
 
 @mixin tablet {
-    @media screen and (min-width: $tablet-breakpoint) {
+    @media screen and (max-width: 1279px) and (min-width: $tablet-breakpoint) {
         @content;
     }
 }
