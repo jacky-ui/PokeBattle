@@ -5,6 +5,8 @@ body.classList.add("background--initial");
 let button = document.querySelector(".button__start");
 let buttonParent = document.querySelector(".button");
 
+// Function to remove button and change background when clicked on
 button.addEventListener("click", () => {
-    buttonParent.classList.add("button__none");
+    buttonParent.classList.replace("button", "button__none");
+    body.classList.replace("background--initial", "background--start");
 });
