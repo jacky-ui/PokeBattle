@@ -12,6 +12,10 @@ body {
   margin: 0;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .background--initial {
   background-image: url(../assets/images/pokemon-background1.png);
   background-repeat: no-repeat;
@@ -44,4 +48,26 @@ body {
     background-position: center;
     height: 100vh;
   }
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+.button__start {
+  font-size: 1.75rem;
+  font-weight: normal;
+  line-height: 2.25rem;
+  font-family: "Pokemon";
+  padding: 3% 7%;
+  border-radius: 1rem;
+  border: 0px;
+}
+.button__start:hover {
+  color: #2a75bb;
+  background-color: #ffcb05;
 }/*# sourceMappingURL=global.css.map */
