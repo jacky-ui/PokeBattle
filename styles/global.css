@@ -70,4 +70,7 @@ button:hover {
 .button__start:hover {
   color: #2a75bb;
   background-color: #ffcb05;
+}
+.button__none {
+  display: none;
 }/*# sourceMappingURL=global.css.map */
