@@ -19,7 +19,7 @@ button.addEventListener("click", () => {
 
 // Axios GET Request
 axios
-    .get(`${apiWebsite}pokemon/`)
+    .get(`${apiWebsite}move/3/`)
     .then((response) => {
         console.log(response);
     });
