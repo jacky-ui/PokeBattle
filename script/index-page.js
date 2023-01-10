@@ -1,6 +1,9 @@
 // Website stored in variable
 const apiWebsite = "http://pokeapi.co/api/v2/";
 
+// Declare empty array which GET request will be stored
+let pokemons = [];
+
 // Render background image when page starts up
 let body = document.querySelector("body");
 body.classList.add("background--initial");
@@ -14,3 +17,9 @@ button.addEventListener("click", () => {
     body.classList.replace("background--initial", "background--start");
 });
 
+// Axios GET Request
+axios
+    .get(`${apiWebsite}pokemon/`)
+    .then((response) => {
+        console.log(response);
+    });
