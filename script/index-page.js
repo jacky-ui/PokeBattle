@@ -21,5 +21,6 @@ button.addEventListener("click", () => {
 axios
     .get(apiWebsite)
     .then((response) => {
-        console.log(response);
+        pokemons = response.data.data;
+        console.log(pokemons);
     });
