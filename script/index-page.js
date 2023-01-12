@@ -3,6 +3,13 @@ const apiWebsite = "https://api.pokemontcg.io/v2/cards";
 
 // Declare empty array which GET request will be stored
 let pokemons = [];
+// Axios GET Request
+axios
+    .get(apiWebsite)
+    .then((response) => {
+        pokemons = response.data.data;
+        console.log(pokemons);
+    });
 
 // Render background image when page starts up
 let body = document.querySelector("body");
@@ -17,10 +24,10 @@ button.addEventListener("click", () => {
     body.classList.replace("background--initial", "background--start");
 });
 
-// Axios GET Request
-axios
-    .get(apiWebsite)
-    .then((response) => {
-        pokemons = response.data.data;
-        console.log(pokemons);
-    });
+// Function to generate random number. Will use this to grab random Pokemon from array
+let generateRandomNumber = () => {
+    let randomNumber = Math.floor(Math.random() * 99);
+    return randomNumber;
+}
+let myPokemonNum = generateRandomNumber();
+console.log(myPokemonNum);
