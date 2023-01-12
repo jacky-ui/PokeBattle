@@ -21,17 +21,17 @@ let pokemons
 let myPokemons = [];
 let oppPokemons = [];
 // Axios GET Request
-axios
-    .get(apiWebsite)
-    .then((response) => {
-        pokemons = response.data.data;
-        myPokemons = pokemons[myPokemonNum];
-        oppPokemons = pokemons[oppPokemonNum];
-        console.log(myPokemons, oppPokemons);
-    })
-    .catch((error) => {
-        console.error(error)
-    });
+// axios
+//     .get(apiWebsite)
+//     .then((response) => {
+//         pokemons = response.data.data;
+//         myPokemons = pokemons[myPokemonNum];
+//         oppPokemons = pokemons[oppPokemonNum];
+//         console.log(myPokemons, oppPokemons);
+//     })
+//     .catch((error) => {
+//         console.error(error)
+//     });
 
 // Render background image when page starts up
 let body = document.querySelector("body");
