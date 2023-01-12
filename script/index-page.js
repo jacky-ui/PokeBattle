@@ -1,5 +1,5 @@
 // Website stored in variable
-const apiWebsite = "http://pokeapi.co/api/v2/";
+const apiWebsite = "https://api.pokemontcg.io/v2/cards";
 
 // Declare empty array which GET request will be stored
 let pokemons = [];
@@ -19,7 +19,7 @@ button.addEventListener("click", () => {
 
 // Axios GET Request
 axios
-    .get(`${apiWebsite}move/3/`)
+    .get(apiWebsite)
     .then((response) => {
         console.log(response);
     });
