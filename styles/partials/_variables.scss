@@ -6,7 +6,7 @@ $desktop-breakpoint: 1280px;
 // Mixins for each breakpoint
 
 @mixin mobile {
-    @media screen and (min-width: $mobile-breakpoint) {
+    @media screen and (max-width: $mobile-breakpoint) {
         @content;
     }
 }
