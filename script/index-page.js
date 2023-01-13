@@ -10,12 +10,14 @@ let buttonParent = document.querySelector(".button");
 let cards = document.querySelector(".cards");
 let yourCardImage = document.querySelector("#yourPoke");
 let oppCardImage = document.querySelector("#oppPoke");
+let buttonBattle = document.querySelector(".button__battle")
 
 // Function to remove button and change background when clicked on
 button.addEventListener("click", () => {
     buttonParent.classList.replace("button", "display__none");
     body.classList.replace("background--initial", "background--start");
     cards.classList.remove("display__none");
+    buttonBattle.classList.remove("display__none");
 });
 
 // Function to generate random number. Will use this to grab random Pokemon from array
