@@ -70,3 +70,24 @@ button:hover {
         display: none;
     }
 }
+
+// Cards styling
+.cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &__container {
+
+        &--sizing {
+            width:5rem;
+            height: 7rem;
+            background-color: #2a75bb;
+        }
+    }
+
+    &__versus {
+        @include page-header-desktop;
+    }
+}

@@ -73,4 +73,22 @@ button:hover {
 }
 .button__none {
   display: none;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.cards__container--sizing {
+  width: 5rem;
+  height: 7rem;
+  background-color: #2a75bb;
+}
+.cards__versus {
+  font-size: 1.75rem;
+  font-weight: normal;
+  line-height: 2.25rem;
+  font-family: "Pokemon";
 }/*# sourceMappingURL=global.css.map */
