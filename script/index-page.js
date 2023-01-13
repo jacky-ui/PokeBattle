@@ -41,21 +41,33 @@ let myPokemons = [];
 let oppPokemons = [];
 
 // Axios GET Request
-// axios
-//     .get(apiWebsite)
-//     .then((response) => {
-//         pokemons = response.data.data;
-//         myPokemons = pokemons[myPokemonNum];
-//         oppPokemons = pokemons[oppPokemonNum];
-//         console.log(myPokemons, oppPokemons);
+axios
+    .get(apiWebsite)
+    .then((response) => {
+        pokemons = response.data.data;
+        myPokemons = pokemons[myPokemonNum];
+        oppPokemons = pokemons[oppPokemonNum];
+        console.log(myPokemons, oppPokemons);
 
-//         grabImage(myPokemons, oppPokemons);
-//     })
-//     .catch((error) => {
-//         console.error(error)
-//     });
+        grabImage(myPokemons, oppPokemons);
+    })
+    .catch((error) => {
+        console.error(error)
+    });
 
 let grabImage = (yourImage, oppImage) => {
     yourCardImage.setAttribute("src", yourImage.images.large);
     oppCardImage.setAttribute("src", oppImage.images.large);
 };
+
+buttonBattle.addEventListener("click", () => {
+    let firstPokemonAttack = myPokemons.attacks[0].damage * 1;
+    let secondPokemonAttack = oppPokemons.attacks[0].damage * 1;
+
+    let winner = (firstPokemonAttack === secondPokemonAttack) ? "Draw"
+    : (firstPokemonAttack > secondPokemonAttack) ? "You Win!"
+    : "You Lose!";
+    console.log(winner);
+    console.log(firstPokemonAttack);
+    console.log(secondPokemonAttack);
+})
