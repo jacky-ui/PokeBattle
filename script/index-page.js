@@ -1,6 +1,24 @@
 // Website stored in variable
 const apiWebsite = "https://api.pokemontcg.io/v2/cards";
 
+// Render background image when page starts up
+let body = document.querySelector("body");
+body.classList.add("background--initial");
+
+let button = document.querySelector(".button__start");
+let buttonParent = document.querySelector(".button");
+let cards = document.querySelector(".cards");
+let yourCardImage = document.querySelector("#yourPoke");
+let oppCardImage = document.querySelector("#oppPoke");
+console.log(yourCardImage, oppCardImage);
+
+// Function to remove button and change background when clicked on
+button.addEventListener("click", () => {
+    buttonParent.classList.replace("button", "display__none");
+    body.classList.replace("background--initial", "background--start");
+    cards.classList.remove("display__none");
+});
+
 // Function to generate random number. Will use this to grab random Pokemon from array
 // Generate my Pokemon
 let generateRandomNumber = () => {
@@ -20,33 +38,22 @@ let oppPokemonNum = generateRandomNumber2();
 let pokemons
 let myPokemons = [];
 let oppPokemons = [];
+
 // Axios GET Request
-// axios
-//     .get(apiWebsite)
-//     .then((response) => {
-//         pokemons = response.data.data;
-//         myPokemons = pokemons[myPokemonNum];
-//         oppPokemons = pokemons[oppPokemonNum];
-//         console.log(myPokemons, oppPokemons);
-//     })
-//     .catch((error) => {
-//         console.error(error)
-//     });
+axios
+    .get(apiWebsite)
+    .then((response) => {
+        pokemons = response.data.data;
+        myPokemons = pokemons[myPokemonNum];
+        oppPokemons = pokemons[oppPokemonNum];
+        console.log(myPokemons, oppPokemons);
 
-// Render background image when page starts up
-let body = document.querySelector("body");
-body.classList.add("background--initial");
+        grabImage(myPokemons, oppPokemons);
+    })
+    .catch((error) => {
+        console.error(error)
+    });
 
-let button = document.querySelector(".button__start");
-let buttonParent = document.querySelector(".button");
-let cards = document.querySelector(".cards");
-let yourCardImage = document.querySelector("#yourPoke");
-let oppCardImage = document.querySelector("#oppPoke");
-console.log(yourCardImage, oppCardImage);
-
-// Function to remove button and change background when clicked on
-button.addEventListener("click", () => {
-    buttonParent.classList.replace("button", "display__none");
-    body.classList.replace("background--initial", "background--start");
-    cards.classList.remove("display__none");
-});
+let grabImage = (yourImage, oppImage) => {
+    console.log(yourImage.images.large, oppImage.images)
+};
