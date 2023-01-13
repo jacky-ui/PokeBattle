@@ -10,7 +10,6 @@ let buttonParent = document.querySelector(".button");
 let cards = document.querySelector(".cards");
 let yourCardImage = document.querySelector("#yourPoke");
 let oppCardImage = document.querySelector("#oppPoke");
-console.log(yourCardImage, oppCardImage);
 
 // Function to remove button and change background when clicked on
 button.addEventListener("click", () => {
@@ -55,5 +54,6 @@ axios
     });
 
 let grabImage = (yourImage, oppImage) => {
-    console.log(yourImage.images.large, oppImage.images)
+    yourCardImage.setAttribute("src", yourImage.images.large);
+    oppCardImage.setAttribute("src", oppImage.images.large);
 };

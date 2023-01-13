@@ -105,20 +105,17 @@ button:hover {
 .cards__container--sizing {
   width: 11rem;
   height: 13rem;
-  background-color: #2a75bb;
 }
 @media screen and (min-width: 1280px) {
   .cards__container--sizing {
     width: 18rem;
     height: 25rem;
-    background-color: #2a75bb;
   }
 }
 @media screen and (max-width: 1279px) and (min-width: 768px) {
   .cards__container--sizing {
     width: 14rem;
     height: 19rem;
-    background-color: #2a75bb;
   }
 }
 .cards__versus {
