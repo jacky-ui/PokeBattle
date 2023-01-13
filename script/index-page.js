@@ -39,19 +39,19 @@ let myPokemons = [];
 let oppPokemons = [];
 
 // Axios GET Request
-axios
-    .get(apiWebsite)
-    .then((response) => {
-        pokemons = response.data.data;
-        myPokemons = pokemons[myPokemonNum];
-        oppPokemons = pokemons[oppPokemonNum];
-        console.log(myPokemons, oppPokemons);
+// axios
+//     .get(apiWebsite)
+//     .then((response) => {
+//         pokemons = response.data.data;
+//         myPokemons = pokemons[myPokemonNum];
+//         oppPokemons = pokemons[oppPokemonNum];
+//         console.log(myPokemons, oppPokemons);
 
-        grabImage(myPokemons, oppPokemons);
-    })
-    .catch((error) => {
-        console.error(error)
-    });
+//         grabImage(myPokemons, oppPokemons);
+//     })
+//     .catch((error) => {
+//         console.error(error)
+//     });
 
 let grabImage = (yourImage, oppImage) => {
     yourCardImage.setAttribute("src", yourImage.images.large);

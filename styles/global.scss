@@ -65,6 +65,32 @@ button:hover {
             background-color: #ffcb05;
         }
     }
+    &__battle {
+        @include page-header-desktop;
+        padding: 6% 8%;
+        border-radius: 1rem;
+        border: 0px;
+        line-height: 3.5rem;
+
+        @include mobile {
+            font-size:1.5rem;
+        }
+
+        &:hover {
+            color: #2a75bb;
+            background-color: #ffcb05;
+        }
+    }
+    &__container {
+        position: absolute;
+        bottom: 7%;
+        left: 50%;
+
+        @include mobile {
+            bottom: 38%;
+            left: 44.5%;
+        }
+    }
 }
 
 // Cards styling
