@@ -65,10 +65,6 @@ button:hover {
             background-color: #ffcb05;
         }
     }
-
-    &__none {
-        display: none;
-    }
 }
 
 // Cards styling
@@ -130,4 +126,8 @@ button:hover {
             font-size: 5rem;
         }
     }
+}
+
+.display__none {
+    display: none;
 }
