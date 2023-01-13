@@ -101,18 +101,15 @@ button:hover {
             @include desktop {
                 width: 18rem;
                 height: 25rem;
-                background-color: #2a75bb;
             }
 
             @include tablet {
                 width: 14rem;
                 height: 19rem;
-                background-color: #2a75bb;
             }
             // Mobile styling
             width: 11rem;
             height: 13rem;
-            background-color: #2a75bb;
         }
     }
 
