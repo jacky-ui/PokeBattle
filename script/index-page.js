@@ -64,10 +64,8 @@ buttonBattle.addEventListener("click", () => {
     let firstPokemonAttack = myPokemons.attacks[0].damage * 1;
     let secondPokemonAttack = oppPokemons.attacks[0].damage * 1;
 
-    let winner = (firstPokemonAttack === secondPokemonAttack) ? "Draw"
-    : (firstPokemonAttack > secondPokemonAttack) ? "You Win!"
-    : "You Lose!";
-    console.log(winner);
-    console.log(firstPokemonAttack);
-    console.log(secondPokemonAttack);
+    let winner = (firstPokemonAttack === secondPokemonAttack) ? "DRAW"
+    : (firstPokemonAttack > secondPokemonAttack) ? "WIN!"
+    : "LOSE!";
+
 })
