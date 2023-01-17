@@ -157,13 +157,20 @@ button:hover {
 
 .modal {
     background-color: deepskyblue;
-    width: 45%;
-    height: 30%;
+    width: 40rem;
+    height: 20rem;
     position: absolute;
     z-index: 1;
     top: 38%;
     left: 28%;
     border-radius: 40px;
+
+    @include tablet {
+        top: 30%;
+        left: 25%;
+        width: 50%;
+        height: 43%;
+    }
 
     &__close {
         @include page-header-desktop;
@@ -175,5 +182,16 @@ button:hover {
         @include mobile {
             font-size: 11vw;
         }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__message {
+        @include page-header-desktop;
+        position: absolute;
+        font-size: 5rem;
+        top: 10%;
+        left: 35%;
     }
 }

@@ -171,13 +171,21 @@ button:hover {
 
 .modal {
   background-color: deepskyblue;
-  width: 45%;
-  height: 30%;
+  width: 40rem;
+  height: 20rem;
   position: absolute;
   z-index: 1;
   top: 38%;
   left: 28%;
   border-radius: 40px;
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .modal {
+    top: 30%;
+    left: 25%;
+    width: 50%;
+    height: 43%;
+  }
 }
 .modal__close {
   font-size: 2rem;
@@ -193,4 +201,17 @@ button:hover {
   .modal__close {
     font-size: 11vw;
   }
+}
+.modal__close:hover {
+  cursor: pointer;
+}
+.modal__message {
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 2.5rem;
+  font-family: "Pokemon";
+  position: absolute;
+  font-size: 5rem;
+  top: 10%;
+  left: 35%;
 }/*# sourceMappingURL=global.css.map */
