@@ -154,3 +154,14 @@ button:hover {
 .display__none {
     display: none;
 }
+
+.modal {
+    background-color: deepskyblue;
+    width: 45%;
+    height: 30%;
+    position: absolute;
+    z-index: 1;
+    top: 38%;
+    left: 28%;
+    border-radius: 40px;
+}

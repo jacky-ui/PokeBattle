@@ -68,4 +68,4 @@ buttonBattle.addEventListener("click", () => {
     : (firstPokemonAttack > secondPokemonAttack) ? "WIN!"
     : "LOSE!";
 
-})
+});
