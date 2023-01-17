@@ -172,6 +172,11 @@ button:hover {
         height: 43%;
     }
 
+    @include mobile {
+        width: 50%;
+        height: 35%;
+    }
+
     &__close {
         @include page-header-desktop;
         position: absolute;
@@ -193,5 +198,9 @@ button:hover {
         font-size: 5rem;
         top: 10%;
         left: 35%;
+
+        @include mobile {
+            font-size: 8vw;
+        }
     }
 }

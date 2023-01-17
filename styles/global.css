@@ -187,6 +187,12 @@ button:hover {
     height: 43%;
   }
 }
+@media screen and (max-width: 767px) {
+  .modal {
+    width: 50%;
+    height: 35%;
+  }
+}
 .modal__close {
   font-size: 2rem;
   font-weight: normal;
@@ -214,4 +220,9 @@ button:hover {
   font-size: 5rem;
   top: 10%;
   left: 35%;
+}
+@media screen and (max-width: 767px) {
+  .modal__message {
+    font-size: 8vw;
+  }
 }/*# sourceMappingURL=global.css.map */
