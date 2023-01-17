@@ -178,4 +178,14 @@ button:hover {
   top: 38%;
   left: 28%;
   border-radius: 40px;
+}
+.modal__close {
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 2.5rem;
+  font-family: "Pokemon";
+  position: absolute;
+  right: 5%;
+  top: 1%;
+  font-size: 5rem;
 }/*# sourceMappingURL=global.css.map */

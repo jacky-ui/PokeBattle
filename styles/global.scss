@@ -164,4 +164,12 @@ button:hover {
     top: 38%;
     left: 28%;
     border-radius: 40px;
+
+    &__close {
+        @include page-header-desktop;
+        position: absolute;
+        right: 5%;
+        top: 1%;
+        font-size: 5rem;
+    }
 }
