@@ -167,4 +167,62 @@ button:hover {
 
 .display__none {
   display: none;
+}
+
+.modal {
+  background-color: deepskyblue;
+  width: 40rem;
+  height: 20rem;
+  position: absolute;
+  z-index: 1;
+  top: 38%;
+  left: 28%;
+  border-radius: 40px;
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .modal {
+    top: 30%;
+    left: 25%;
+    width: 50%;
+    height: 43%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal {
+    width: 50%;
+    height: 35%;
+  }
+}
+.modal__close {
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 2.5rem;
+  font-family: "Pokemon";
+  position: absolute;
+  right: 5%;
+  top: 1%;
+  font-size: 5rem;
+}
+@media screen and (max-width: 767px) {
+  .modal__close {
+    font-size: 11vw;
+  }
+}
+.modal__close:hover {
+  cursor: pointer;
+}
+.modal__message {
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 2.5rem;
+  font-family: "Pokemon";
+  position: absolute;
+  font-size: 5rem;
+  top: 10%;
+  left: 35%;
+}
+@media screen and (max-width: 767px) {
+  .modal__message {
+    font-size: 8vw;
+  }
 }/*# sourceMappingURL=global.css.map */
