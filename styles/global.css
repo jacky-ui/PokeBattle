@@ -188,4 +188,9 @@ button:hover {
   right: 5%;
   top: 1%;
   font-size: 5rem;
+}
+@media screen and (max-width: 767px) {
+  .modal__close {
+    font-size: 11vw;
+  }
 }/*# sourceMappingURL=global.css.map */

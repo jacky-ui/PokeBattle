@@ -171,5 +171,9 @@ button:hover {
         right: 5%;
         top: 1%;
         font-size: 5rem;
+
+        @include mobile {
+            font-size: 11vw;
+        }
     }
 }
