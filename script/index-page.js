@@ -14,7 +14,6 @@ let buttonBattle = document.querySelector(".button__battle");
 let modalContainer = document.querySelector(".modal");
 let modalMessage = document.querySelector(".modal__message");
 const closeModal = document.querySelector(".modal__close");
-console.log(closeModal);
 
 // Function to remove button and change background when clicked on
 button.addEventListener("click", () => {
@@ -30,7 +29,6 @@ let generateRandomNumber = () => {
     let randomNumber = Math.floor(Math.random() * 99);
     return randomNumber;
 }
-
 // Generate opponent Pokemon
 let generateRandomNumber2 = () => {
     let randomNumber = Math.floor(Math.random() * 99);
@@ -80,6 +78,17 @@ buttonBattle.addEventListener("click", () => {
     writeModalMessage(winner);
 });
 
+// Generate new battles 
+let generateNewBattle = () => {
+    myPokemonNum = generateRandomNumber();
+    oppPokemonNum = generateRandomNumber2();
+
+    myPokemons = pokemons[myPokemonNum];
+    oppPokemons = pokemons[oppPokemonNum];
+    grabImage(myPokemons, oppPokemons);
+}
+
 closeModal.addEventListener("click", () => {
     modalContainer.classList.add("display__none");
+    generateNewBattle();
 });
