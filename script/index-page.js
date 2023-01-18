@@ -10,7 +10,9 @@ let buttonParent = document.querySelector(".button");
 let cards = document.querySelector(".cards");
 let yourCardImage = document.querySelector("#yourPoke");
 let oppCardImage = document.querySelector("#oppPoke");
-let buttonBattle = document.querySelector(".button__battle")
+let buttonBattle = document.querySelector(".button__battle");
+let modalContainer = document.querySelector("#modal");
+let modalMessage = document.querySelector(".modal__message");
 
 // Function to remove button and change background when clicked on
 button.addEventListener("click", () => {
@@ -60,6 +62,12 @@ let grabImage = (yourImage, oppImage) => {
     oppCardImage.setAttribute("src", oppImage.images.large);
 };
 
+// Function to remove display_none and write status of battle
+let writeModalMessage = (result) => {
+    modalContainer.classList.remove("display__none");
+    modalMessage.innerText = result;
+};
+
 buttonBattle.addEventListener("click", () => {
     let firstPokemonAttack = myPokemons.attacks[0].damage * 1;
     let secondPokemonAttack = oppPokemons.attacks[0].damage * 1;
@@ -67,5 +75,6 @@ buttonBattle.addEventListener("click", () => {
     let winner = (firstPokemonAttack === secondPokemonAttack) ? "DRAW"
     : (firstPokemonAttack > secondPokemonAttack) ? "WIN!"
     : "LOSE!";
-
+    writeModalMessage(winner);
 });
+
