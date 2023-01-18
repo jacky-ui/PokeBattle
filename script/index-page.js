@@ -11,8 +11,10 @@ let cards = document.querySelector(".cards");
 let yourCardImage = document.querySelector("#yourPoke");
 let oppCardImage = document.querySelector("#oppPoke");
 let buttonBattle = document.querySelector(".button__battle");
-let modalContainer = document.querySelector("#modal");
+let modalContainer = document.querySelector(".modal");
 let modalMessage = document.querySelector(".modal__message");
+const closeModal = document.querySelector(".modal__close");
+console.log(closeModal);
 
 // Function to remove button and change background when clicked on
 button.addEventListener("click", () => {
