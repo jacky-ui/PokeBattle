@@ -80,3 +80,6 @@ buttonBattle.addEventListener("click", () => {
     writeModalMessage(winner);
 });
 
+closeModal.addEventListener("click", () => {
+    modalContainer.classList.add("display__none");
+})
