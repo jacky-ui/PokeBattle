@@ -103,23 +103,27 @@ button:hover {
     height: 100vh;
 
     @include mobile {
-        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6rem;
+        padding: 3.2rem;
     }
 
     &__container {
-        @include mobile {
-            position: absolute;
-        }
         &:first-child {
+            margin-bottom: 10%;
+
             @include mobile {
-                top: 10%;
-                left: 9%;
+                align-self: flex-start;
+                margin: unset;
             }
         }
         &:last-child {
+            margin-top: 10%;
+
             @include mobile {
-                bottom: 10%;
-                right: 9%;
+                align-self: flex-end;
+                margin: unset;
             }
         }
 

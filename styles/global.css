@@ -112,24 +112,28 @@ button:hover {
 }
 @media screen and (max-width: 767px) {
   .cards {
-    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6rem;
+    padding: 3.2rem;
   }
 }
-@media screen and (max-width: 767px) {
-  .cards__container {
-    position: absolute;
-  }
+.cards__container:first-child {
+  margin-bottom: 10%;
 }
 @media screen and (max-width: 767px) {
   .cards__container:first-child {
-    top: 10%;
-    left: 9%;
+    align-self: flex-start;
+    margin: unset;
   }
+}
+.cards__container:last-child {
+  margin-top: 10%;
 }
 @media screen and (max-width: 767px) {
   .cards__container:last-child {
-    bottom: 10%;
-    right: 9%;
+    align-self: flex-end;
+    margin: unset;
   }
 }
 .cards__container--sizing {
