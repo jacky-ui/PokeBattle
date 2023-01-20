@@ -67,13 +67,14 @@ button:hover {
     }
     &__battle {
         @include page-header-desktop;
-        padding: 6% 8%;
+        padding: 2% 3%;
         border-radius: 1rem;
         border: 0px;
         line-height: 3.5rem;
 
         @include mobile {
             font-size:1.5rem;
+            padding: 0% 2%;
         }
 
         &:hover {
@@ -84,11 +85,11 @@ button:hover {
     &__container {
         position: absolute;
         bottom: 7%;
-        left: 50%;
+        width: 100%;
+        text-align: center;
 
         @include mobile {
             bottom: 38%;
-            left: 44.5%;
         }
     }
 }
