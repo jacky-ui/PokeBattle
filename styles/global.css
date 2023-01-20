@@ -76,7 +76,7 @@ button:hover {
   font-weight: normal;
   line-height: 2.5rem;
   font-family: "Pokemon";
-  padding: 6% 8%;
+  padding: 2% 3%;
   border-radius: 1rem;
   border: 0px;
   line-height: 3.5rem;
@@ -84,6 +84,7 @@ button:hover {
 @media screen and (max-width: 767px) {
   .button__battle {
     font-size: 1.5rem;
+    padding: 0% 2%;
   }
 }
 .button__battle:hover {
@@ -93,12 +94,12 @@ button:hover {
 .button__container {
   position: absolute;
   bottom: 7%;
-  left: 50%;
+  width: 100%;
+  text-align: center;
 }
 @media screen and (max-width: 767px) {
   .button__container {
     bottom: 38%;
-    left: 44.5%;
   }
 }
 
@@ -112,24 +113,28 @@ button:hover {
 }
 @media screen and (max-width: 767px) {
   .cards {
-    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6rem;
+    padding: 3.2rem;
   }
 }
-@media screen and (max-width: 767px) {
-  .cards__container {
-    position: absolute;
-  }
+.cards__container:first-child {
+  margin-bottom: 10%;
 }
 @media screen and (max-width: 767px) {
   .cards__container:first-child {
-    top: 10%;
-    left: 9%;
+    align-self: flex-start;
+    margin: unset;
   }
+}
+.cards__container:last-child {
+  margin-top: 10%;
 }
 @media screen and (max-width: 767px) {
   .cards__container:last-child {
-    bottom: 10%;
-    right: 9%;
+    align-self: flex-end;
+    margin: unset;
   }
 }
 .cards__container--sizing {
@@ -165,35 +170,29 @@ button:hover {
   }
 }
 
-.display__none {
-  display: none;
-}
-
 .modal {
-  background-color: deepskyblue;
-  width: 40rem;
-  height: 20rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
   position: absolute;
   z-index: 1;
   top: 38%;
-  left: 28%;
+}
+.modal__container {
+  background-color: deepskyblue;
+  width: 40rem;
+  height: 15rem;
+  position: relative;
   border-radius: 40px;
 }
-@media screen and (max-width: 1279px) and (min-width: 768px) {
-  .modal {
-    top: 30%;
-    left: 25%;
-    width: 50%;
-    height: 43%;
-  }
-}
 @media screen and (max-width: 767px) {
-  .modal {
+  .modal__container {
     width: 50%;
-    height: 35%;
+    height: 100%;
   }
 }
-.modal__close {
+.modal__container--close {
   font-size: 2rem;
   font-weight: normal;
   line-height: 2.5rem;
@@ -204,25 +203,26 @@ button:hover {
   font-size: 5rem;
 }
 @media screen and (max-width: 767px) {
-  .modal__close {
+  .modal__container--close {
     font-size: 11vw;
   }
 }
-.modal__close:hover {
+.modal__container--close:hover {
   cursor: pointer;
 }
-.modal__message {
+.modal__container--message {
   font-size: 2rem;
   font-weight: normal;
   line-height: 2.5rem;
   font-family: "Pokemon";
-  position: absolute;
   font-size: 5rem;
-  top: 10%;
-  left: 35%;
 }
 @media screen and (max-width: 767px) {
-  .modal__message {
+  .modal__container--message {
     font-size: 8vw;
   }
+}
+
+.display__none {
+  display: none;
 }/*# sourceMappingURL=global.css.map */

@@ -67,13 +67,14 @@ button:hover {
     }
     &__battle {
         @include page-header-desktop;
-        padding: 6% 8%;
+        padding: 2% 3%;
         border-radius: 1rem;
         border: 0px;
         line-height: 3.5rem;
 
         @include mobile {
             font-size:1.5rem;
+            padding: 0% 2%;
         }
 
         &:hover {
@@ -84,11 +85,11 @@ button:hover {
     &__container {
         position: absolute;
         bottom: 7%;
-        left: 50%;
+        width: 100%;
+        text-align: center;
 
         @include mobile {
             bottom: 38%;
-            left: 44.5%;
         }
     }
 }
@@ -103,23 +104,27 @@ button:hover {
     height: 100vh;
 
     @include mobile {
-        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6rem;
+        padding: 3.2rem;
     }
 
     &__container {
-        @include mobile {
-            position: absolute;
-        }
         &:first-child {
+            margin-bottom: 10%;
+
             @include mobile {
-                top: 10%;
-                left: 9%;
+                align-self: flex-start;
+                margin: unset;
             }
         }
         &:last-child {
+            margin-top: 10%;
+
             @include mobile {
-                bottom: 10%;
-                right: 9%;
+                align-self: flex-end;
+                margin: unset;
             }
         }
 
@@ -151,58 +156,54 @@ button:hover {
     }
 }
 
-// Reusable class
-.display__none {
-    display: none;
-}
-
 // Styling for modal
 .modal {
-    background-color: deepskyblue;
-    width: 40rem;
-    height: 20rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
     position: absolute;
     z-index: 1;
     top: 38%;
-    left: 28%;
-    border-radius: 40px;
 
-    @include tablet {
-        top: 30%;
-        left: 25%;
-        width: 50%;
-        height: 43%;
-    }
-
-    @include mobile {
-        width: 50%;
-        height: 35%;
-    }
-
-    &__close {
-        @include page-header-desktop;
-        position: absolute;
-        right: 5%;
-        top: 1%;
-        font-size: 5rem;
+    &__container {
+        background-color: deepskyblue;
+        width: 40rem;
+        height: 15rem;
+        position: relative;
+        border-radius: 40px;
 
         @include mobile {
-            font-size: 11vw;
+            width: 50%;
+            height: 100%;
         }
-        &:hover {
-            cursor: pointer;
+
+        &--close {
+            @include page-header-desktop;
+            position: absolute;
+            right: 5%;
+            top: 1%;
+            font-size: 5rem;
+    
+            @include mobile {
+                font-size: 11vw;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        &--message {
+            @include page-header-desktop;
+            font-size: 5rem;
+    
+            @include mobile {
+                font-size: 8vw;
+            }
         }
     }
+}
 
-    &__message {
-        @include page-header-desktop;
-        position: absolute;
-        font-size: 5rem;
-        top: 10%;
-        left: 35%;
-
-        @include mobile {
-            font-size: 8vw;
-        }
-    }
+// Reusable class
+.display__none {
+    display: none;
 }
