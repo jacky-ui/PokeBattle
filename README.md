@@ -10,6 +10,7 @@ This was a fun little Pokemon game I created using [Pokemon API: https://pokeapi
 <ul>
   <li>Front-End: HTML, CSS, SASS, JavaScript</li>
   <li>Libraries: Axios</li>
+  <li>API: Poke API</li>
 </ul>
 
 <p align="left">
