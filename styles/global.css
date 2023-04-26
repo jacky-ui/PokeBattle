@@ -312,4 +312,11 @@ button:hover {
 
 .third {
   animation: bounce 2s ease infinite 0.9s;
+}
+
+.canvas {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
 }/*# sourceMappingURL=global.css.map */
