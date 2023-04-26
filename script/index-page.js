@@ -1,5 +1,5 @@
 // Website stored in variable
-const apiWebsite = "https://api.pokemontcg.io/v2/cards";
+// const apiWebsite = "https://api.pokemontcg.io/v2/cards";
 
 // Render background image when page starts up
 let body = document.querySelector("body");
@@ -52,19 +52,19 @@ let myPokemons = [];
 let oppPokemons = [];
 
 // Axios GET Request
-axios
-    .get(apiWebsite)
-    .then((response) => {
-        pokemons = response.data.data;
-        myPokemons = pokemons[myPokemonNum];
-        oppPokemons = pokemons[oppPokemonNum];
-        hideLoading();
+// axios
+//     .get(apiWebsite)
+//     .then((response) => {
+//         pokemons = response.data.data;
+//         myPokemons = pokemons[myPokemonNum];
+//         oppPokemons = pokemons[oppPokemonNum];
+//         hideLoading();
 
-        grabImage(myPokemons, oppPokemons);
-    })
-    .catch((error) => {
-        console.error(error)
-    });
+//         grabImage(myPokemons, oppPokemons);
+//     })
+//     .catch((error) => {
+//         console.error(error)
+//     });
 
 let grabImage = (yourImage, oppImage) => {
     yourCardImage.setAttribute("src", yourImage.images.large);

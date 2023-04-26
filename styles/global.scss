@@ -215,3 +215,68 @@ button:hover {
 .display__none {
     display: none;
 }
+
+// Styling for bouncing text during loading
+.bouncing-text {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    padding-top: 25rem;
+
+    & div {
+        @include page-header-desktop;
+        color:yellow;
+    }
+}
+
+@keyframes bounce {
+    0%   { transform: scale(1,1) translateY(0); }
+    10%  { transform: scale(1.1,.9) translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-55px);}
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    58%  { transform: scale(1,1) translateY(-7px); }
+    65%  { transform: scale(1,1) translateY(0);}
+    100% { transform: scale(1,1) translateY(0);}
+}
+
+.l {
+    animation: bounce 2s ease infinite;
+}
+  
+.o {
+    animation: bounce 2s ease infinite .1s;
+}
+  
+.a {
+    animation: bounce 2s ease infinite .2s;
+}
+  
+.d {
+    animation: bounce 2s ease infinite .3s;
+}
+  
+.i {
+    animation: bounce 2s ease infinite .4s;
+}
+  
+.n {
+    animation: bounce 2s ease infinite .5s;
+}
+
+.g {
+    animation: bounce 2s ease infinite .6s;
+}
+
+.first {
+    animation: bounce 2s ease infinite .7s;
+}
+
+.second {
+    animation: bounce 2s ease infinite .8s;
+}
+
+.third {
+    animation: bounce 2s ease infinite .9s;
+}
