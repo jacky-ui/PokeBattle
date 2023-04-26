@@ -20,3 +20,5 @@ This was a fun little Pokemon game I created using [Pokemon API: https://pokeapi
 </p>
 
 At first I actually wanted to recreate a Pokemon battle like in the games, but I noticed that this API only provides images of a Pokemon card. Maybe I will create my own Pokemon API with images of Pokemons instead of cards.
+
+P.S. The API used is very slow, so will take time for things to load
