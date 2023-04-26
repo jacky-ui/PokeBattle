@@ -14,6 +14,14 @@ button:hover {
     cursor: pointer;
 }
 
+.background--loading {
+    background-image: url(../assets/images/pikachu-loader.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
 .background--initial {
     background-image: url(../assets/images/pokemon-background1.png);
     background-repeat: no-repeat;
