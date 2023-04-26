@@ -3,7 +3,7 @@ const apiWebsite = "https://api.pokemontcg.io/v2/cards";
 
 // Render background image when page starts up
 let body = document.querySelector("body");
-body.classList.add("background--initial");
+body.classList.add("background--loading");
 
 let button = document.querySelector(".button__start");
 let buttonParent = document.querySelector(".button");
@@ -14,6 +14,15 @@ let buttonBattle = document.querySelector(".button__battle");
 let modalContainer = document.querySelector(".modal");
 let modalMessage = document.querySelector(".modal__container--message");
 const closeModal = document.querySelector(".modal__container--close");
+
+button.classList.add("display__none");
+
+function hideLoading() {
+    body.classList.remove("background--loading");
+    body.classList.add("background--initial");
+    button.classList.remove("display__none");
+    button.classList.add("button__start")
+};
 
 // Function to remove button and change background when clicked on
 button.addEventListener("click", () => {
@@ -49,7 +58,7 @@ axios
         pokemons = response.data.data;
         myPokemons = pokemons[myPokemonNum];
         oppPokemons = pokemons[oppPokemonNum];
-        console.log(myPokemons, oppPokemons);
+        hideLoading();
 
         grabImage(myPokemons, oppPokemons);
     })
