@@ -1,5 +1,5 @@
 // Website stored in variable
-// const apiWebsite = "https://api.pokemontcg.io/v2/cards";
+const apiWebsite = "https://api.pokemontcg.io/v2/cards";
 
 // Render background image when page starts up
 let body = document.querySelector("body");
@@ -13,15 +13,19 @@ let oppCardImage = document.querySelector("#oppPoke");
 let buttonBattle = document.querySelector(".button__battle");
 let modalContainer = document.querySelector(".modal");
 let modalMessage = document.querySelector(".modal__container--message");
+let loadingText = document.querySelector(".bouncing-text");
 const closeModal = document.querySelector(".modal__container--close");
 
 button.classList.add("display__none");
 
+// Function will remove loading background, put back button and take out loading text
 function hideLoading() {
     body.classList.remove("background--loading");
     body.classList.add("background--initial");
     button.classList.remove("display__none");
-    button.classList.add("button__start")
+    button.classList.add("button__start");
+    loadingText.classList.remove("bouncing-text");
+    loadingText.classList.add("display__none");
 };
 
 // Function to remove button and change background when clicked on
@@ -52,19 +56,19 @@ let myPokemons = [];
 let oppPokemons = [];
 
 // Axios GET Request
-// axios
-//     .get(apiWebsite)
-//     .then((response) => {
-//         pokemons = response.data.data;
-//         myPokemons = pokemons[myPokemonNum];
-//         oppPokemons = pokemons[oppPokemonNum];
-//         hideLoading();
+axios
+    .get(apiWebsite)
+    .then((response) => {
+        pokemons = response.data.data;
+        myPokemons = pokemons[myPokemonNum];
+        oppPokemons = pokemons[oppPokemonNum];
+        hideLoading();
 
-//         grabImage(myPokemons, oppPokemons);
-//     })
-//     .catch((error) => {
-//         console.error(error)
-//     });
+        grabImage(myPokemons, oppPokemons);
+    })
+    .catch((error) => {
+        console.error(error)
+    });
 
 let grabImage = (yourImage, oppImage) => {
     yourCardImage.setAttribute("src", yourImage.images.large);
