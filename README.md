@@ -6,6 +6,7 @@ This was a little fun Pokemon game I created using Pokemon API: https://pokeapi.
 ![image](https://user-images.githubusercontent.com/64509710/221288555-38cf5be4-f510-4759-8c62-4304376bdf06.png)
 
 ## Tech Stack
+
 <ul>
   <li>Front-End: HTML, CSS, SASS, JavaScript</li>
   <li>Libraries: Axios</li>
